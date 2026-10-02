@@ -1,0 +1,10 @@
+func main() {
+    let name = "Anand"
+    var age = 35
+
+    age = 36
+
+    print("Hello \(name)")
+    print("Age: \(age)")
+    print("Next year: \(age + 1)")
+}
