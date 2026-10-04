@@ -1,0 +1,48 @@
+let age  = 18
+if age >= 18 {
+	print("Adult")
+} else {
+	print("Minor")
+}
+
+//switch
+let score = 86
+switch score {
+	case 90...100:
+	print("Grade A")
+	case 80..<89:
+	print("Grade B")
+	default:
+	print("Grade C")
+}
+// for loop
+for number  in 1...5 {
+	print(number)
+}
+// Iterator over the array
+let array = [110,20,30]
+for number in array {
+  print(number)
+}
+for (index, number) in array.enumerated() {
+    print("Index: \(index), Value: \(number)")
+}
+
+//while loop
+var count = 0
+while count <= 3 {
+  print(count)
+  count += 1
+}
+
+
+func checkAge(age : Int) {
+  guard age >= 18 else {
+    print("Access Denied")
+    return
+  }
+  print("Access Granted")
+}
+
+checkAge(age: 19)
+checkAge(age: 17)
