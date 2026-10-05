@@ -1,0 +1,33 @@
+func calculateTotal(price: Double, quantity: Int) -> Double {
+    price * Double(quantity)
+}
+
+func calculateDiscount(
+    amount: Double,
+    discountPercent: Double
+) -> Double {
+    amount * (1 - discountPercent / 100)
+}
+
+func printOrderSummary(
+    productName: String,
+    amount: Double
+) {
+    print("Product: \(productName)")
+    print("Final Amount: \(amount)")
+}
+
+let total = calculateTotal(
+    price: 300.0,
+    quantity: 3
+)
+
+let finalAmount = calculateDiscount(
+    amount: total,
+    discountPercent: 10
+)
+
+printOrderSummary(
+    productName: "iPhone",
+    amount: finalAmount
+)
