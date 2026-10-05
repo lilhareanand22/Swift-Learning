@@ -1,0 +1,32 @@
+func add(a:Int, b:Int) -> Int {
+  return a + b
+}
+
+let result = add(a:10, b:20)
+print("adding two number:\(result)")
+
+
+func greet(person name: String) {
+    print("Hello \(name)")
+}
+greet(person: "Anand")
+//Multiple Parameters
+func calculateTotal(price: Double, quantity: Int) -> Double {
+    return price * Double(quantity)
+}
+
+let total = calculateTotal(price: 100.0, quantity: 3)
+
+print(total)
+//Default Paramete
+func greet(name: String, message: String = "Welcome") {
+    print("\(message), \(name)")
+}
+greet(name: "Anand")
+//Swift Function as a First-Class Value
+
+let operation = add
+
+let result1 = operation(10, 20)
+
+print(result1)
