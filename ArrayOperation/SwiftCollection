@@ -1,0 +1,13 @@
+SwiftCollection
+
+
+let numbers: [Int] = [10, 20, 30]
+for num in numbers {
+  print(num)
+}
+
+//Mutalbe Array
+var numArray:[Int] = [11,15,21,33]
+numArray.append(66)
+numArray.remove(at:0)
+print(numArray)

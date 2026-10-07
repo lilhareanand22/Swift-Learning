@@ -1,0 +1,21 @@
+ArrayOperation
+
+
+var names = ["Anand", "Rahul"]
+names.append("Minakshi")
+names.append(contentsOf:["Madhuri", "Mahi","Dhadu"])
+print(names)
+let first = names[0]
+print(first)
+print(names.count)
+if names.isEmpty {
+    print("No users")
+}
+names.remove(at: 0)
+names.removeLast()
+if names.contains("Anand") {
+    print("Found")
+}
+for name in names {
+    print(name)
+}
