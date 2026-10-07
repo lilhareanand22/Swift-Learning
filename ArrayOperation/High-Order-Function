@@ -1,0 +1,21 @@
+High-Order-Function
+
+let number = [2,3,4,6,8]
+let square = number.map { number in
+                        number * number
+  
+}
+print(square)
+
+let evenNumbers = number.filter { number in
+    number % 2 == 0
+}
+print(evenNumbers)
+
+let values = ["10", "20", "abc", "30"]
+
+let numbers = values.compactMap {
+    Int($0)
+}
+
+print(numbers)
