@@ -1,0 +1,11 @@
+Set-Operation
+
+let android = Set(["Kotlin", "Java", "Android","Mobile Techanology"])
+let iOS = Set(["Swift", "Objective-C", "iOS","Mobile Techanology"])
+let all = android.union(iOS)
+print(all)
+let common = android.intersection(iOS)
+print("common from two set \(common)")
+
+let difference = android.subtracting(iOS)
+print("Differnces from two set: \(difference)")

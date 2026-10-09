@@ -1,0 +1,39 @@
+Coding-Exercise
+
+
+let employees = [
+    "Anand",
+    "John",
+    "Anand",
+    "David",
+    "John",
+    "Alex"
+]
+//Requirement 1 — Remove duplicates
+//Create a Set containing unique employee names.
+let setEmployee = Set(employees)
+print(setEmployee)
+//Requirement 2 — Filter names
+//Create an array containing employees whose name starts with "A".
+let startWithA = employees.filter{$0.hasPrefix("A")}
+print(startWithA)
+//Requirement 3 — Transform names
+//Convert all names to uppercase using map.
+let nameWithUpercase = employees.map{name in name.uppercased() }
+print(nameWithUpercase)
+//Requirement 4 — Dictionary
+//Create a dictionary representing employee IDs:
+let employeeIds:[Int:String] = [
+  101: "Anand",
+  102: "John",
+  103: "David"
+]
+let employee = employeeIds[102] ?? "Unknow"
+print(employee)
+//Requirement 5 — compactMap
+//Convert them into [Int] using compactMap.
+let employeeIds1 = ["101", "102", "ABC", "103"]
+let numbers = employeeIds1.compactMap {
+    Int($0)
+}
+print(numbers)
