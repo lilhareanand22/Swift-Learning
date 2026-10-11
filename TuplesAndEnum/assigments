@@ -1,0 +1,29 @@
+
+
+enum ApiStatus {
+    case loading
+    case success(data: String)
+    case failure(message: String)
+}
+
+func getApiResponse() -> (statusCode: Int, status: ApiStatus) {
+    return (
+        statusCode: 200,
+        status: .success(data: "User loaded")
+    )
+}
+
+let response = getApiResponse()
+
+print("Status code: \(response.statusCode)")
+
+switch response.status {
+case .loading:
+    print("Loading...")
+
+case .success(let data):
+    print(data)
+
+case .failure(let message):
+    print(message)
+}

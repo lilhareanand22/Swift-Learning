@@ -1,0 +1,35 @@
+#Enum
+
+print("Try clicking the Run button.")
+
+enum HttpStatus: Int {
+  case success = 200
+  case unauthorized = 401
+  case notFound = 404
+}
+
+let statusCode = HttpStatus.notFound.rawValue
+print(statusCode)
+
+let status = HttpStatus(rawValue: 401)
+
+print(status == .unauthorized)
+// Raw value: A predefined value associated with a case, such as 404.
+// Associated value: Data supplied when creating a particular enum value, such as .failure(message: "Network error").
+
+enum LoginState {
+  case idle
+  case loading
+  case success(userName: String)
+  case error(message:String)
+}
+
+func handleLogin(success:Bool) -> LoginState {
+  if success {
+    return .success(userName: "Anand")
+  } else {
+    return .error(message: "Login faile")
+  }
+}
+let loginStatus = handleLogin(success: true)
+print(loginStatus)
