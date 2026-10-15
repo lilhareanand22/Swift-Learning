@@ -1,0 +1,17 @@
+
+
+
+class Employee {
+    var name:String
+    var salary : Double
+  init(name:String, salary : Double) {
+    self.name = name
+    self.salary = salary
+  }
+  func displayName() {
+    print("Name: \(name),  Salary:\(salary)")
+  }
+}
+let employee = Employee(name:"Anand", salary: 5000)
+
+employee.displayName()

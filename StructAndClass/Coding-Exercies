@@ -1,0 +1,23 @@
+
+
+struct Employee {
+    var id: Int
+    var name: String
+    var salary: Double
+    
+    // 'mutating' is required because structs are value types in Swift
+    mutating func increaseSalary(by percentage: Double) {
+        salary += salary * (percentage / 100.0)
+    }
+}
+
+// 3. Create employee1 and assign it to employee2
+var employee1 = Employee(id: 1, name: "Alex", salary: 50_000.0)
+var employee2 = employee1
+
+// 4. Increase employee2's salary by 10%
+employee2.increaseSalary(by: 10.0)
+
+// 5. Print both employee salaries
+print("Employee 1 (\(employee1.name)) Salary: \(employee1.salary)") // 50000.0
+print("Employee 2 (\(employee2.name)) Salary: \(employee2.salary)") // 55000.0
